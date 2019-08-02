@@ -27,7 +27,7 @@
 		stdout-path = &uart1;
 	};
 
-/*
+
 	ir_gpios{
 		compatible = "gpio-ir";
 		pinctrl-names = "default";
@@ -144,8 +144,8 @@
 			gpios = <&gpio3 31 GPIO_ACTIVE_HIGH>;
 //			linux,code = <IR_FOCUS_STAT>;
 		};
-	};*/
-/*
+	};
+
 	lrf-gpios{
 		compatible = "gpio-lrf";
 		pinctrl-names = "default";
@@ -179,8 +179,7 @@
 		};
 	
 	};
-*/
-/*
+
 	ipb-gpios {
 		compatible = "gpio-ipb";
 		pinctrl-names = "default";
@@ -224,8 +223,7 @@
 
 	};
 
-*/
-/*
+
 	gpio-keys {
 		compatible = "gpio-keys";
 		pinctrl-names = "default";
@@ -259,8 +257,7 @@
 //			linux,code = <KEY_LEFT>;
 		};
 	};
-*/
-/*
+
 	prox-gpios {
 		compatible = "gpio-prox";
 		pinctrl-names = "default";
@@ -274,8 +271,7 @@
 		};
 
 	};
-*/
-/*
+
 
 	EXT-gpios {
 		compatible = "gpio-ext";
@@ -325,7 +321,6 @@
 		};
 
 	};
-*/
 
 	gpio-keys {
 		compatible = "gpio-keys";
