@@ -778,8 +778,8 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_usdhc3>;
 	bus-width = <4>;
-	cd-gpios = <&gpio1 20 GPIO_ACTIVE_LOW>;
-	wp-gpios = <&gpio6 9 GPIO_ACTIVE_HIGH>;
+	cd-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+	wp-gpios = <&gpio2 16 GPIO_ACTIVE_HIGH>;
 	no-1-8-v;
 	keep-power-in-suspend;
 	enable-sdio-wakeup;
@@ -1156,8 +1156,8 @@
 				MX6QDL_PAD_SD3_DAT1__SD3_DATA1		0x17059
 				MX6QDL_PAD_SD3_DAT2__SD3_DATA2		0x17059
 				MX6QDL_PAD_SD3_DAT3__SD3_DATA3		0x17059
-				MX6QDL_PAD_SD1_CLK__GPIO1_IO20		0x80000000 /* CD */ 
- 				MX6QDL_PAD_NANDF_WP_B__GPIO6_IO09	0x80000000 /* WP */ 
+//				MX6QDL_PAD_SD1_CLK__GPIO1_IO20		0x80000000 /* CD */ 
+// 				MX6QDL_PAD_NANDF_WP_B__GPIO6_IO09	0x80000000 /* WP */ 
 			>;
 		};
 
