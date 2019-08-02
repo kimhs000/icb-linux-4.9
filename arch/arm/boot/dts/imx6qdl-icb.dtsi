@@ -27,7 +27,7 @@
 		stdout-path = &uart1;
 	};
 
-
+/*
 	ir_gpios{
 		compatible = "gpio-ir";
 		pinctrl-names = "default";
@@ -144,8 +144,8 @@
 			gpios = <&gpio3 31 GPIO_ACTIVE_HIGH>;
 //			linux,code = <IR_FOCUS_STAT>;
 		};
-	};
-
+	};*/
+/*
 	lrf-gpios{
 		compatible = "gpio-lrf";
 		pinctrl-names = "default";
@@ -179,8 +179,8 @@
 		};
 	
 	};
-
-
+*/
+/*
 	ipb-gpios {
 		compatible = "gpio-ipb";
 		pinctrl-names = "default";
@@ -224,7 +224,8 @@
 
 	};
 
-
+*/
+/*
 	gpio-keys {
 		compatible = "gpio-keys";
 		pinctrl-names = "default";
@@ -258,7 +259,8 @@
 //			linux,code = <KEY_LEFT>;
 		};
 	};
-
+*/
+/*
 	prox-gpios {
 		compatible = "gpio-prox";
 		pinctrl-names = "default";
@@ -272,6 +274,8 @@
 		};
 
 	};
+*/
+/*
 
 	EXT-gpios {
 		compatible = "gpio-ext";
@@ -321,8 +325,9 @@
 		};
 
 	};
+*/
 
-/*	gpio-keys {
+	gpio-keys {
 		compatible = "gpio-keys";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_gpio_keys>;
@@ -348,7 +353,7 @@
 			linux,code = <KEY_VOLUMEDOWN>;
 		};
 	};
-*/
+
 
 	regulators {
 		compatible = "simple-bus";
@@ -419,8 +424,8 @@
  		status = "disabled"; 
  	}; 
 
-
-/*	lcd@0 {
+/*
+	lcd@0 {
 		compatible = "fsl,lcd";
 		ipu_id = <0>;
 		disp_id = <0>;
@@ -429,14 +434,14 @@
 		pinctrl-0 = <&pinctrl_ipu1>;
 		status = "disabled";
 	};
-
+*/
 	backlight {
 		compatible = "pwm-backlight";
 		pwms = <&pwm1 0 5000000>;
 		brightness-levels = <0 4 8 16 32 64 128 255>;
 		default-brightness-level = <7>;
 		status = "disabled";
-	};*/
+	};
 
 	v4l2_cap_0 {
 		compatible = "fsl,imx6q-v4l2-capture";
@@ -461,7 +466,7 @@
 
 };
 
-/*
+
 &ldb {
 	status = "okay";
 
@@ -485,7 +490,7 @@
 			};
 		};
 	};
-};*/
+};
 
 
 &audmux {
@@ -504,23 +509,6 @@
 	fsl,ldb-di1-parent = <&clks IMX6QDL_CLK_PLL2_PFD0_352M>;
 };
 
-/*
-&ecspi1 {
-	fsl,spi-num-chipselects = <1>;
-	cs-gpios = <&gpio4 9 0>;
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_ecspi1>;
-	status = "okay";
-
-	flash: m25p80@0 {
-		#address-cells = <1>;
-		#size-cells = <1>;
-		compatible = "st,m25p32";
-		spi-max-frequency = <20000000>;
-		reg = <0>;
-	};
-};
-*/
 
 &ecspi1 {
 	fsl,spi-num-chipselects = <1>;
@@ -530,7 +518,7 @@
 	status = "okay";
 
 };
-
+/*
 &ecspi3 {
 	fsl,spi-num-chipselects = <1>;
 	cs-gpios = <&gpio4 24 0>;
@@ -539,7 +527,7 @@
 	status = "okay";
 
 };
-
+*/
 &ecspi5 {
 	fsl,spi-num-chipselects = <1>;
 	cs-gpios = <&gpio1 14 0>;
@@ -896,7 +884,7 @@
 //				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x80000000 /* CS0 */
 			>;
 		};
-
+/*
 		pinctrl_ecspi3: ecspi3grp {
 			fsl,pins = <
 
@@ -906,7 +894,7 @@
 				MX6QDL_PAD_DISP0_DAT3__GPIO4_IO24          0x0001B0B0
 			>;
 		};
-
+*/
 		pinctrl_ecspi5: ecspi5grp {
 			fsl,pins = <
 
@@ -1106,8 +1094,8 @@
 
 		pinctrl_uart1: uart1grp {
 			fsl,pins = <
-				MX6QDL_PAD_SD3_DAT6__UART1_RX_DATA	0x1b0b1
-				MX6QDL_PAD_SD3_DAT7__UART1_TX_DATA	0x1b0b1
+				MX6QDL_PAD_CSI0_DAT10__UART1_TX_DATA	0x1b0b1
+				MX6QDL_PAD_CSI0_DAT11__UART1_RX_DATA	0x1b0b1
 			>;
 		};
 
