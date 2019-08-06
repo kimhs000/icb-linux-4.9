@@ -28,8 +28,8 @@
 	};
 
 
-	ir_gpios{
-		compatible = "gpio-ir";
+	gpios_ircamera{
+		compatible = "fsl,imx6q-gpio";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_ir_gpios>;
 		
@@ -146,7 +146,7 @@
 		};
 	};
 
-	lrf-gpios{
+	gpios-lrf{
 		compatible = "gpio-lrf";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_lrf_gpios>;
@@ -180,7 +180,7 @@
 	
 	};
 
-	ipb-gpios {
+	gpios-ipb{
 		compatible = "gpio-ipb";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_ipb_gpios>;
