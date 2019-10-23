@@ -513,7 +513,7 @@
 	status = "okay";
 
 };
-/*
+
 &ecspi3 {
 	fsl,spi-num-chipselects = <1>;
 	cs-gpios = <&gpio4 24 0>;
@@ -521,8 +521,14 @@
 	pinctrl-0 = <&pinctrl_ecspi3>;
 	status = "okay";
 
+	spi@0 {
+		compatible = "spidev";
+		spi-max-frequency = <10000000>;
+		reg = <0>;
+	};
+
 };
-*/
+
 &ecspi5 {
 	fsl,spi-num-chipselects = <1>;
 	cs-gpios = <&gpio1 14 0>;
@@ -886,7 +892,7 @@
 //				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x80000000 /* CS0 */
 			>;
 		};
-/*
+
 		pinctrl_ecspi3: ecspi3grp {
 			fsl,pins = <
 
@@ -896,7 +902,7 @@
 				MX6QDL_PAD_DISP0_DAT3__GPIO4_IO24          0x0001B0B0
 			>;
 		};
-*/
+
 		pinctrl_ecspi5: ecspi5grp {
 			fsl,pins = <
 
